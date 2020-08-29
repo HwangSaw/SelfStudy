@@ -1,0 +1,3 @@
+﻿  C++STL.cpp
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(12,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  C++STL.vcxproj -> F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\Debug\C++STL.exe
