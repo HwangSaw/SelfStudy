@@ -90,7 +90,7 @@ void main()
 */
 
 
-// /*
+/*
 // 2.8 함수 템플릿의 전문화 라는 것이 있다. 
 #include<iostream>
 using namespace std;
@@ -144,4 +144,40 @@ void main()
 	// 2. 템플릿 함수와 맞는지 검사
 	// 3. 일반 함수와 맞는지 검사
 }
+*/
+
+// /*
+// 2.9 난-타입(non-type) 함수 템플릿
+#include<iostream>
+using namespace std;
+
+// 지정된 값만큼 더해준다.
+template <typename T, int VAL> T AddValue(T const& CurValue)
+{
+	return CurValue + VAL;
+}
+
+const int EVENT_ADD_HP_VALUE = 50; // 이벤트에 의해 추가 될 HP값
+const int EVENT_ADD_EXP_VALUE = 30; // 이벤트에 의해 추가될 경험치  
+const int EVENT_ADD_MONEY_VALUE = 10000; // 이벤트에 의해 추가 될 돈
+
+void main()
+{
+	int Char_HP = 250;
+	cout << Char_HP << "에서 이벤트에 의해 " << AddValue < int, EVENT_ADD_HP_VALUE>(Char_HP) << "로 변경" << endl;
+
+	float Char_EXP = 378.89f;
+	cout << Char_EXP << "에서 이벤트에 의해" << AddValue<float, EVENT_ADD_EXP_VALUE>(Char_EXP) << "로 변경" << endl;
+
+	__int64 Char_MONEY = 34567890;
+	cout << Char_MONEY << "에서 이벤트에 의해" << AddValue<__int64, EVENT_ADD_MONEY_VALUE>(Char_MONEY) << "로 변경" << endl;
+
+	// 실행 결과
+	// 250 에서 이벤트에 의해 300로 변경
+	// 378.89 에서 이벤트에 의해 408.89 로 변경
+	// 34567890에서 이벤트에 의해 34577890 로 변경 
+
+}
+
+
 // */
