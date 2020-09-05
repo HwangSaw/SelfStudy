@@ -92,5 +92,52 @@ void main()
 
 // /*
 // 2.8 함수 템플릿의 전문화 라는 것이 있다. 
+#include<iostream>
+using namespace std;
 
+// 템플릿으로 만든값을 비교하는 Max함수
+template <typename T1, typename T2> const T1& Max(const T1& a, const T2& b)
+{
+	cout << "Max(const T& a,  const T& b) 템플릿 버전 사용" << endl;
+	return a > b ? a : b;
+}
+
+// 전문화 시킨 Max함수
+template <> const double& Max(const double& a, const double& b)
+{
+	cout << "Max(const double& a, const double& b) 전문화 버전 사용" << endl;
+	return a > b ? a : b;
+}
+
+void main()
+{
+	double Char1_MP = 300;
+	double Char1_SP = 400.25;
+	double MaxValue1 = Max(Char1_MP, Char1_SP);
+	cout << "MP와 SP중 가장 큰 값은 " << MaxValue1 << "입니다." << endl << endl;
+
+	int Char2_MP = 300;
+	double Char2_SP = 400.25;
+	double MaxValue2 = Max(Char2_MP, Char2_SP);
+	cout << "MP와 SP중 가장 큰 값은 " << MaxValue2 << "입니다" << endl << endl;
+
+	// 실행결과 
+	// Max<const double& a, const double& b> 전문화 버전 사용
+	// MP 와 SP 중 가장 큰 값은 400.25 입니다. 
+	//
+	// Max<const T& a, cosnt T& b> 템플릿 버전 사용
+	// MP 와 SP 중 가장 큰 값은 400 입니다.
+
+	double Char3_MP = 10.1f;
+	double Char3_SP = 20.4f;
+	double MaxValue3 = Max(Char3_MP, Char3_SP);
+	cout << "MP와 SP중 가장 큰 값은" << MaxValue3 << "입니다" << endl << endl;
+
+	// 전문화 함수와 템플릿 함수둘다 호출이 가능할때 컴파일러는 전문화 버전을 먼저 호출한다.
+	// 호출 순서
+	// 1. 전문화된 함수와 맞는지 검사
+	// 2. 템플릿 함수와 맞는지 검사
+	// 3. 일바 ㄴ함수와 맞는지 검사
+
+}
 // */
