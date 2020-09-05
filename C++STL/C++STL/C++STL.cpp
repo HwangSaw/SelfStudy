@@ -1,5 +1,7 @@
 ﻿
-// /*
+/*
+
+// 2.5  
 #include <iostream>
 using namespace std;
 
@@ -36,7 +38,27 @@ void main()
 	cout << "경험치 중 가장 큰 값은" << MaxCharExp << "입니다." << endl << endl;
 
 }
-//*/
+*/
 
+/*
+// 2.6 하나의 T (typename)을 가진 탬플릿은 두가지 타입을 인식하지 못한다. 
+#include <iostream>
+using namespace std;
 
-//
+template <typename T> const T& Max(const T& a, const T& b)
+{
+	return a > b ? a : b;
+}
+
+// [리스트 2-3]의 Max 함수 템플릿을 사용한다.
+void main()
+{
+	int Char1_MP = 300;
+	double Char1_SP = 400.25;
+	// 아래 구문은 컴파일러가 int와 double이라는 두가지타입이 있기때문에 현재 Max 로는 T를 어떤걸로 정할지 알수없어서 
+	// no instance of function template "Max" matches the argument list 에러를 발생. 
+	//double MaxValue1 = Max(Char1_MP, Char1_SP);
+	//cout << "MP와 SP중 가장 큰 값은" << MaxValue1 << "입니다" << endl << endl;
+
+}
+*/
