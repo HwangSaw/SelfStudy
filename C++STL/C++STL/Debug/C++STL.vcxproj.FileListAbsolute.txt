@@ -1,2 +1,0 @@
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\Debug\C++STL.exe
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\Debug\C++STL.pdb

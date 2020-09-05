@@ -1,9 +1,0 @@
-﻿  C++STL.cpp
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(55,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(58,21): error C2672: 'Max': no matching overloaded function found
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(58,43): error C2782: 'const T &Max(const T &,const T &)': template parameter 'T' is ambiguous
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(48): message : see declaration of 'Max'
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(58,43): message : could be 'double'
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(58,43): message : or       'int'
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(58,43): error C2784: 'const T &Max(const T &,const T &)': could not deduce template argument for 'const T &' from 'double'
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(48): message : see declaration of 'Max'
