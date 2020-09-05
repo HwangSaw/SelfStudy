@@ -128,16 +128,20 @@ void main()
 	// Max<const T& a, cosnt T& b> 템플릿 버전 사용
 	// MP 와 SP 중 가장 큰 값은 400 입니다.
 
+
+	// 질문 : Max(10.1, 20.4)를 호출한다면 Max(T, T) 가 호출될까? 아니면 Max(double, double)이 호출될까? 
 	double Char3_MP = 10.1f;
 	double Char3_SP = 20.4f;
 	double MaxValue3 = Max(Char3_MP, Char3_SP);
 	cout << "MP와 SP중 가장 큰 값은" << MaxValue3 << "입니다" << endl << endl;
 
+	// 실행결과
+	// Max<const double& a, const double& b> 전문화 버전 사용 
+
 	// 전문화 함수와 템플릿 함수둘다 호출이 가능할때 컴파일러는 전문화 버전을 먼저 호출한다.
 	// 호출 순서
 	// 1. 전문화된 함수와 맞는지 검사
 	// 2. 템플릿 함수와 맞는지 검사
-	// 3. 일바 ㄴ함수와 맞는지 검사
-
+	// 3. 일반 함수와 맞는지 검사
 }
 // */
