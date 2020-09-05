@@ -1,3 +1,10 @@
 ﻿  C++STL.cpp
-F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(12,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-  C++STL.vcxproj -> F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\Debug\C++STL.exe
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(19,29): error C2995: 'const T &Max(const T &,const T &)': 함수 템플릿이 이미 정의되었습니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(14): message : 'Max' 선언을 참조하십시오.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(25,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(28,18): error C2065: 'Max': 선언되지 않은 식별자입니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(28,41): error C2440: '초기화 중': 'const T &(__cdecl *)(const T &,const T &)'에서 'int'(으)로 변환할 수 없습니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(28,16): message : 컨텍스트는 오버로드 함수의 명확성을 고려할 수 없습니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(33,21): error C2065: 'Max': 선언되지 않은 식별자입니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(33,46): error C2440: '초기화 중': 'const T &(__cdecl *)(const T &,const T &)'에서 'float'(으)로 변환할 수 없습니다.
+F:\Documents\Projects\studyProject\SelfStudy\C++STL\C++STL\C++STL.cpp(33,19): message : 컨텍스트는 오버로드 함수의 명확성을 고려할 수 없습니다.
