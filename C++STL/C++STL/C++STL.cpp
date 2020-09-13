@@ -534,7 +534,7 @@ void main()
 }
  */
 
-// /*
+ /*
 // 3.6 템플릿 파라미터 디폴트 값 사용
 // 템플릿 파라미터 중 int Size가 non-type 파라미터다.
 // Size의 디폴트 값을 100으로 한다. 
@@ -617,6 +617,124 @@ void main()
 	cout << "스택의 크기는?" << kStack2.GetStackSize() << endl;
 
 }
+ */
+
+// /*
+// 3.7 스택 클래스의 크기를 클래스 생성자에서 지정
+template<typename T, int Size = 100> class Stack
+{
+public:
+	explicit Stack(int size)
+	{
+		m_Size = size;
+		m_aData = new T[m_Size];
+
+		Clear();
+	}
+
+	~Stack()
+	{
+		delete[] m_aData;
+	}
+
+	// 초기화 한다.
+	void Clear()
+	{
+		m_Count = 0;
+	}
+
+	// 스택에 저장된 개수
+	int Count()
+	{
+		return m_Count;
+	}
+
+	// 저장된 데이터가 없는가?
+	bool IsEmpty()
+	{
+		return 0 == m_Count ? true : false;
+	}
+
+	// 데이터를 담을 수 있는 최대 개수
+	int GetStackSize()
+	{
+		return m_Size;
+	}
+
+	// 데이터를 저장한다.
+	bool push(T data)
+	{
+		// 저장할 수 있는 개수를 넘는지 조사한다.
+		if (m_Count >= m_Size)
+		{
+			return false;
+		}
+
+		// 저장 후 개수를 하나 늘린다.
+		m_aData[m_Count] = data;
+		++m_Count;
+
+		return true;
+	}
+
+	// 스택에서 빼낸다.
+	T pop()
+	{
+		// 저장된 것이 없다면 0을 반환한다.
+		if (m_Count < 1)
+		{
+			return 0;
+		}
+
+		// 개수를 하나 감소 후 반환한다.
+		--m_Count;
+		return m_aData[m_Count];
+	}
+
+private:
+	T* m_aData;
+	int m_Count;
+
+	int m_Size;
+};
+
+#include<iostream>
+using namespace std;
+
+void main()
+{
+	Stack<int> kStack1(64);
+	cout << "스택의 크기는?" << kStack1.GetStackSize() << endl;
+
+}
+
+
 // */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
