@@ -709,9 +709,10 @@ void main()
 }
 */
 
-// /*
+/*
 
 // 3.8 클래스 템플릿 전문화
+
 // ID 문자열의 최대 길이 (null 문자 포함 )
 const int MAX_ID_LENGTH = 21;
 
@@ -921,8 +922,80 @@ void main()
 
 
 }
-// */
+*/
 
+
+///*
+// 3.9 클래스 템플릿 부분 전문화 
+// 일반 템플릿
+
+#include<iostream>
+using namespace std;
+
+template< typename T1, typename T2>
+class Test
+{
+public:
+	T1 Add(T1 a, T2 b)
+	{
+		cout << " 일반 템플릿을 사용했습니다." << endl;
+		return a;
+	}
+};
+
+
+template<typename T>
+class TestP
+{
+public :
+	void Add()
+	{
+		cout << "일반 템플릿을 사용했습니다." << endl;
+	}
+};
+
+// T를 T*로 부분 전문화
+template< typename T >
+class TestP<T*>
+{
+public:
+	void Add()
+	{
+		cout << "포인터를 사용한 부분 전문화 템플릿을 사용했습니다." << endl;
+	}
+};
+
+
+// T2를 float으로 구체화한 Test의 부분 전문화 템플릿
+template< typename T1>
+class Test<T1, float>
+{
+public :
+	T1 Add(T1 a, float b)
+	{
+		cout << " 부분 전문화 템플릿을 사용했습니다." << endl;
+		return a;
+	}
+};
+
+void main()
+{
+	Test<int, int > test1;
+	test1.Add(2, 3);
+	
+	Test<int, float> test2;
+	test2.Add(2, 5.8f);
+
+
+	// --- 아래부터 포인터 템플릿 
+	TestP<int> test3;
+	test3.Add();
+
+	TestP<int*> test4;
+	test4.Add();
+}
+
+//*/
 
 
 
