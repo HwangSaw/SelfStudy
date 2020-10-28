@@ -1,0 +1,2 @@
+C:\Users\gepodong\Documents\Projects\SelfStudy\TCP_IP\TCP_IP_Client\Debug\TCP_IP_Client.exe
+C:\Users\gepodong\Documents\Projects\SelfStudy\TCP_IP\TCP_IP_Client\Debug\TCP_IP_Client.pdb
